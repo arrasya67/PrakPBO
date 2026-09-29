@@ -44,7 +44,7 @@
 
 Pengelolaan perpustakaan membutuhkan pencatatan buku, anggota, status ketersediaan, transaksi peminjaman, transaksi pengembalian, dan statistik aktivitas. Jika seluruh proses dilakukan secara manual, petugas dapat mengalami kesulitan ketika harus mencari buku, memastikan buku tidak dipinjam oleh dua orang sekaligus, menghitung batas pinjaman anggota, atau menyusun laporan peminjaman.
 
-Program pada folder `Tugas4` merupakan aplikasi konsol **Sistem Perpustakaan Mini** yang dibuat menggunakan Java dan menerapkan konsep pemrograman berorientasi objek. Program memodelkan buku serta anggota sebagai objek, memusatkan aturan bisnis di dalam service, memisahkan exception khusus, dan menyediakan menu interaktif melalui terminal.
+Program pada folder `Tugas4` merupakan aplikasi konsol **Sistem Perpustakaan** yang dibuat menggunakan Java dan menerapkan konsep pemrograman berorientasi objek. Program memodelkan buku serta anggota sebagai objek, memusatkan aturan bisnis di dalam service, memisahkan exception khusus, dan menyediakan menu interaktif melalui terminal.
 
 ### 2.2 Deskripsi Sistem
 
