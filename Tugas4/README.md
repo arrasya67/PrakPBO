@@ -1,4 +1,4 @@
-# Dokumentasi Tugas 4 — Sistem Perpustakaan Mini
+# Dokumentasi Tugas 4 — Sistem Perpustakaan
 
 > Dokumentasi ini dibuat berdasarkan analisis langsung terhadap seluruh source code pada folder `Tugas4` repository [`arrasya67/PrakPBO`](https://github.com/arrasya67/PrakPBO/tree/main/Tugas4).
 
@@ -34,7 +34,7 @@
 | Repository | `arrasya67/PrakPBO` |
 | Folder | `Tugas4` |
 
-> Silakan mengganti bagian bertanda **[... ]** dengan identitas mahasiswa yang sebenarnya. Informasi identitas tidak tersedia di dalam source code yang dianalisis.
+
 
 ---
 
