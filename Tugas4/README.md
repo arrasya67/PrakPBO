@@ -25,9 +25,9 @@
 
 | Keterangan | Isi |
 |---|---|
-| Nama | **[Isi nama mahasiswa]** |
-| NIM | **[Isi NIM]** |
-| Kelas | **[Isi kelas]** |
+| Nama | **Dwi Agus Maulana** |
+| NIM | **L0325022** |
+| Kelas | **B** |
 | Mata Kuliah | Pemrograman Berorientasi Objek |
 | Tugas | Tugas 4 — Sistem Perpustakaan Mini |
 | Bahasa Pemrograman | Java |
