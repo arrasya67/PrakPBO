@@ -1,0 +1,39 @@
+======================================
+          LAPORAN NILAI MAHASISWA
+======================================
+Nama   : BUDIMAN
+NIM    : 032501
+Nilai  : 85.00
+Grade  : A
+Status : Lulus
+--------------------------------------
+Nama   : HENDRA
+NIM    : 032502
+Nilai  : 90.00
+Grade  : A
+Status : Lulus
+--------------------------------------
+Nama   : JEKI
+NIM    : 0325003
+Nilai  : 75.00
+Grade  : B
+Status : Lulus
+--------------------------------------
+Nama   : ILHAM
+NIM    : 0325001
+Nilai  : 60.00
+Grade  : D
+Status : Tidak Lulus
+--------------------------------------
+Nama   : IRFAN
+NIM    : 0325012
+Nilai  : 89.00
+Grade  : A
+Status : Lulus
+--------------------------------------
+
+============= STATISTIK =============
+Jumlah Mahasiswa : 5
+Rata-rata Nilai  : 79.80
+Jumlah Lulus     : 4
+Jumlah Tidak Lulus: 1
