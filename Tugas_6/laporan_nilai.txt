@@ -1,0 +1,28 @@
+==================================
+        LAPORAN NILAI SISWA
+==================================
+Nama   : Budiman 
+Nilai  : 80.0
+Status : Lulus
+----------------------------------
+Nama   : Raihan Hanan 
+Nilai  : 70.0
+Status : Lulus
+----------------------------------
+Nama   : Erwin Ramadhan
+Nilai  : 79.0
+Status : Lulus
+----------------------------------
+Nama   : Gustavo Almaida
+Nilai  : 69.0
+Status : Tidak Lulus
+----------------------------------
+Nama   : Viscara 
+Nilai  : 68.0
+Status : Tidak Lulus
+----------------------------------
+
+========== RINGKASAN ==========
+Rata-rata nilai : 73.20
+Jumlah Lulus    : 3
+Jumlah Tidak Lulus : 2
