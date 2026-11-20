@@ -70,7 +70,7 @@ Aplikasi berhasil menampilkan rincian pesanan di `areaStruk` dan menghitung Tota
 
 *(Lihat gambar di bawah ini untuk bukti visual)*
 
-![Pengujian Kasir dengan Diskon](images/namafile_gambar_1.png)
+![Pengujian Kasir dengan Diskon](images/image1.jpeg)
 
 
 
