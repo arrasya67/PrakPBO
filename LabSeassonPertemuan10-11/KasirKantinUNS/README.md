@@ -1,49 +1,84 @@
-# Kasir Kantin UNS – Praktikum PBO Pertemuan 11 dan 12
+# 🍽️ Sistem Kasir Kantin UNS
 
-Project ini mengikuti PDF `LAB SESSION P11-12(1).pdf` dan dikerjakan sebagai satu aplikasi bertahap Tahap 1–4.
+> **Tugas Praktikum Pemrograman Berorientasi Objek (PBO)**
+> Pertemuan 11 (Multithreading) & Pertemuan 12 (GUI Programming)
+> Fakultas Teknologi Informasi dan Sains Data Universitas Sebelas Maret (UNS)
 
-## Struktur
+Aplikasi desktop berbasis **Java Swing** ini dirancang untuk mensimulasikan sistem kasir pada Kantin UNS. Aplikasi ini mengintegrasikan logika perhitungan diskon, antarmuka grafis (GUI) yang interaktif, serta penerapan *Multithreading* agar aplikasi tetap responsif saat melakukan proses yang memakan waktu (simulasi cetak struk).
+
+---
+
+## 👨‍🎓 Identitas Mahasiswa
+*   **Nama**  : [Isi Nama Lengkap Kamu]
+*   **NIM**   : [Isi NIM Kamu]
+*   **Kelas** : 3B
+*   **Mata Kuliah** : Pemrograman Berorientasi Objek
+*   **Institusi** : Universitas Sebelas Maret
+
+---
+
+## ✨ Fitur Utama
+1.  **Manajemen Pesanan (GUI):** Input nama menu, harga, dan jumlah dengan antarmuka yang *user-friendly*.
+2.  **Perhitungan Diskon Otomatis:** Sistem secara cerdas mendeteksi jika subtotal belanja melebihi **Rp 50.000**, maka akan otomatis memberikan diskon sebesar **10%**.
+3.  **Validasi Input Ketat:** Mencegah *crash* (error) jika pengguna memasukkan huruf pada kolom angka, atau membiarkan kolom kosong. Peringatan akan muncul menggunakan `JOptionPane`.
+4.  **Simulasi Cetak Struk (Non-Blocking):** Proses cetak struk disimulasikan selama 2 detik. Berkat *Multithreading*, antarmuka GUI **tidak akan macet** (freeze) dan pengguna tetap bisa mengklik tombol lain selama proses berjalan.
+5.  **Simulasi Antrean 2 Kasir:** Demonstrasi *concurrent execution* menggunakan `Thread` di mana dua kasir (Dina dan Eko) melayani pelanggan secara bersamaan.
+
+---
+
+## 🧠 Penerapan Konsep PBO (OOP)
+Proyek ini bukan sekadar aplikasi GUI biasa, melainkan implementasi nyata dari materi PBO:
+*   **Enkapsulasi:** Atribut pada class `Pesanan` (seperti `subtotal`) dibuat `private` dan hanya bisa diakses/diubah melalui *method* publik (`tambahItem`, `getSubtotal`, `reset`).
+*   **Inheritance (Pewarisan):** Class `Kasir` menggunakan konsep pewarisan (`extends Thread`) untuk menjadi sebuah *thread* yang bisa dijalankan.
+*   **Polymorphism (Override):** Method `run()` pada class `Kasir` di-*override* untuk mendefinisikan tugas spesifik yang akan dijalankan oleh *thread* tersebut.
+*   **Event-Driven Programming:** Penggunaan `ActionListener` (Lambda) pada tombol untuk merespons aksi dari pengguna (klik).
+
+---
+
+## 📂 Struktur Direktori & File
+Semua *class* berada di dalam satu *package*: `lab.kasir`.
+
 ```text
-KasirKantinUNS/
-└── src/lab/kasir/
-    ├── Pesanan.java
-    ├── Kasir.java
-    ├── MainKasir.java
-    ├── KasirFrame.java
-    └── MainGUI.java
+📦 Project-Kasir-Kantin
+ ┣ 📂 lab
+ ┃ ┗ 📂 kasir
+ ┃   ┣ 📜 Pesanan.java       # Class model/logika bisnis (menghitung total & diskon)
+ ┃   ┣ 📜 Kasir.java         # Class untuk simulasi thread (2 kasir)
+ ┃   ┣ 📜 KasirFrame.java    # Class utama untuk membangun komponen GUI Swing
+ ┃   ┣ 📜 MainGUI.java       # Entry point untuk menjalankan aplikasi GUI
+ ┃   ┗ 📜 MainKasir.java     # Entry point untuk pengujian logika & thread di console
+ ┗ 📜 README.md
 ```
-Semua class berada di package `lab.kasir`; atribut class menggunakan modifier `private`.
+## 🧪 Dokumentasi Pengujian (Percobaan Mandiri)
 
-## Kompilasi (JDK 8+)
-Dari folder project:
-```bash
-javac -d out src/lab/kasir/*.java
-```
+Berikut adalah hasil pengujian aplikasi menggunakan data pesanan riil untuk membuktikan bahwa logika perhitungan (OOP) dan penerapan diskon berjalan dengan benar.
 
-## Menjalankan Tahap 1 dan 2
-```bash
-java -cp out lab.kasir.MainKasir
-```
-Program menguji total setelah dua menu (Rp45.000), subtotal setelah tiga menu (Rp70.000), total setelah diskon (Rp63.000), kemudian menjalankan thread Kasir Dina dan Eko. Jalankan dua kali untuk membandingkan urutan output. Kalimat `Semua pelanggan selesai dilayani` harus muncul paling akhir karena main menunggu kedua thread dengan `join()`.
+### Skenario Pengujian:
+Kasir memasukkan 4 jenis pesanan dengan rincian sebagai berikut:
+1. **Ayam Goreng** (Harga satuan: Rp 10.000) x 2 porsi = Rp 20.000
+2. **Sop Ayam** (Harga satuan: Rp 15.000) x 3 porsi = Rp 45.000
+3. **Ikan** (Harga satuan: Rp 10.000) x 2 porsi = Rp 20.000
+4. **Ikan Bakar** (Harga satuan: Rp 10.000) x 1 porsi = Rp 10.000
 
-## Menjalankan Tahap 3 dan 4
-```bash
-java -cp out lab.kasir.MainGUI
-```
-Masukkan nama menu, harga, dan jumlah. Tambah tiga menu sesuai data uji PDF. Klik Hitung Total untuk melihat Rp63.000. Klik Cetak Struk untuk menguji status. Selama jeda dua detik, thread Event Dispatch Thread tidak ditahan sehingga tombol Tambah dan Hitung Total tetap responsif.
+### Hasil Perhitungan Sistem:
+*   **Subtotal Belanja:** Rp 20.000 + Rp 45.000 + Rp 20.000 + Rp 10.000 = **Rp 95.000**
+*   **Penerapan Aturan:** Karena subtotal melebihi batas **Rp 50.000**, maka sistem secara otomatis menerapkan diskon sebesar **10%**.
+*   **Nominal Diskon:** 10% x Rp 95.000 = **Rp 9.500**
+*   **Total Bayar Akhir:** Rp 95.000 - Rp 9.500 = **Rp 85.500**
 
-## Data uji dari PDF
-| Menu | Harga | Jumlah | Subtotal |
-|---|---:|---:|---:|
-| Nasi Goreng | 15.000 | 2 | 30.000 |
-| Es Teh | 5.000 | 3 | 15.000 |
-| Ayam Bakar | 25.000 | 1 | 25.000 |
+Aplikasi berhasil menampilkan rincian pesanan di `areaStruk` dan menghitung Total Bayar menjadi **Rp 85.500** saat tombol "Hitung Total" ditekan. Hal ini membuktikan bahwa **logika perhitungan diskon pada class `Pesanan` telah berjalan dengan sempurna**.
 
-Dua menu pertama: Rp45.000 tanpa diskon. Tiga menu: subtotal Rp70.000, diskon 10% Rp7.000, total Rp63.000.
+*(Lihat gambar di bawah ini untuk bukti visual)*
 
-## Catatan pengujian laporan
-- Jalankan `MainKasir` dua kali dan ambil screenshot masing-masing output.
-- Urutan Dina/Eko dapat berubah karena scheduler; jangan menganggap satu urutan tetap.
-- Screenshot GUI setelah ketiga menu ditambahkan dan total dihitung.
-- Screenshot status `Mencetak struk...` dan `Struk selesai`.
-- Uji field kosong dan input bukan angka untuk membuktikan validasi.
+![Pengujian Kasir dengan Diskon](images/namafile_gambar_1.png)
+
+
+
+
+
+
+
+
+
+
+
