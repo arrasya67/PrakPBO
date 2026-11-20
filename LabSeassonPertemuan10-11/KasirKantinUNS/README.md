@@ -9,8 +9,8 @@ Aplikasi desktop berbasis **Java Swing** ini dirancang untuk mensimulasikan sist
 ---
 
 ## 👨‍🎓 Identitas Mahasiswa
-*   **Nama**  : [Isi Nama Lengkap Kamu]
-*   **NIM**   : [Isi NIM Kamu]
+*   **Nama**  : Dwi Agus Maulana
+*   **NIM**   : L0325022
 *   **Kelas** : 3B
 *   **Mata Kuliah** : Pemrograman Berorientasi Objek
 *   **Institusi** : Universitas Sebelas Maret
