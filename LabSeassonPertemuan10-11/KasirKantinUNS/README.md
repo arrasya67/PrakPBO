@@ -49,24 +49,40 @@ Semua *class* berada di dalam satu *package*: `lab.kasir`.
  ┃   ┗ 📜 MainKasir.java     # Entry point untuk pengujian logika & thread di console
  ┗ 📜 README.md
 ```
-## 🧪 Dokumentasi Pengujian (Percobaan Mandiri)
+# 🧪 Dokumentasi Pengujian (Percobaan Mandiri)
 
 Berikut adalah hasil pengujian aplikasi menggunakan data pesanan riil untuk membuktikan bahwa logika perhitungan (OOP) dan penerapan diskon berjalan dengan benar.
 
-### Skenario Pengujian:
-Kasir memasukkan 4 jenis pesanan dengan rincian sebagai berikut:
-1. **Ayam Goreng** (Harga satuan: Rp 10.000) x 2 porsi = Rp 20.000
-2. **Sop Ayam** (Harga satuan: Rp 15.000) x 3 porsi = Rp 45.000
-3. **Ikan** (Harga satuan: Rp 10.000) x 2 porsi = Rp 20.000
-4. **Ikan Bakar** (Harga satuan: Rp 10.000) x 1 porsi = Rp 10.000
+## Skenario Pengujian
+Kasir memasukkan 3 jenis pesanan (sesuai modul Tahap 1) dengan rincian sebagai berikut:
 
-### Hasil Perhitungan Sistem:
-*   **Subtotal Belanja:** Rp 20.000 + Rp 45.000 + Rp 20.000 + Rp 10.000 = **Rp 95.000**
-*   **Penerapan Aturan:** Karena subtotal melebihi batas **Rp 50.000**, maka sistem secara otomatis menerapkan diskon sebesar **10%**.
-*   **Nominal Diskon:** 10% x Rp 95.000 = **Rp 9.500**
-*   **Total Bayar Akhir:** Rp 95.000 - Rp 9.500 = **Rp 85.500**
+- **Nasi Goreng** (Harga satuan: Rp 15.000) x 2 porsi = **Rp 30.000**
+- **Es Teh** (Harga satuan: Rp 5.000) x 3 porsi = **Rp 15.000**
+- **Ayam Bakar** (Harga satuan: Rp 25.000) x 1 porsi = **Rp 25.000**
 
-Aplikasi berhasil menampilkan rincian pesanan di `areaStruk` dan menghitung Total Bayar menjadi **Rp 85.500** saat tombol "Hitung Total" ditekan. Hal ini membuktikan bahwa **logika perhitungan diskon pada class `Pesanan` telah berjalan dengan sempurna**.
+## Hasil Perhitungan Sistem
+
+1. **Subtotal Belanja:** 
+   Rp 30.000 + Rp 15.000 + Rp 25.000 = **Rp 70.000**
+
+2. **Penerapan Aturan:** 
+   Karena subtotal melebihi batas Rp 50.000, maka sistem secara otomatis menerapkan diskon sebesar **10%**.
+
+3. **Nominal Diskon:** 
+   10% x Rp 70.000 = **Rp 7.000**
+
+4. **Total Bayar Akhir:** 
+   Rp 70.000 - Rp 7.000 = **Rp 63.000**
+
+---
+*(Lihat gambar di bawah ini untuk bukti visual)*
+
+![Pengujian Kasir dengan Diskon](src/images/image1.jpeg)
+## Kesimpulan
+
+Aplikasi berhasil menampilkan rincian pesanan di area **Struk** dan menghitung **Total Bayar** menjadi **Rp 63.000** saat tombol "Hitung Total" ditekan. 
+
+Hal ini membuktikan bahwa logika perhitungan diskon pada *class* `Pesanan` telah berjalan dengan sempurna.
 
 *(Lihat gambar di bawah ini untuk bukti visual)*
 
