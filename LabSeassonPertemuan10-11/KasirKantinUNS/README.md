@@ -77,7 +77,7 @@ Kasir memasukkan 3 jenis pesanan (sesuai modul Tahap 1) dengan rincian sebagai b
 ---
 *(Lihat gambar di bawah ini untuk bukti visual)*
 
-![Pengujian Kasir dengan Diskon](src/images/image1.jpeg)
+![Pengujian Kasir dengan Diskon](src/images/image1.png)
 ## Kesimpulan
 
 Aplikasi berhasil menampilkan rincian pesanan di area **Struk** dan menghitung **Total Bayar** menjadi **Rp 63.000** saat tombol "Hitung Total" ditekan. 
