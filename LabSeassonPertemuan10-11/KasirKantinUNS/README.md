@@ -84,9 +84,7 @@ Aplikasi berhasil menampilkan rincian pesanan di area **Struk** dan menghitung *
 
 Hal ini membuktikan bahwa logika perhitungan diskon pada *class* `Pesanan` telah berjalan dengan sempurna.
 
-*(Lihat gambar di bawah ini untuk bukti visual)*
 
-![Pengujian Kasir dengan Diskon](src/images/image1.jpeg)
 
 
 
